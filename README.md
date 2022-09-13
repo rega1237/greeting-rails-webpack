@@ -1,24 +1,89 @@
-# README
+![](./app/assets/images/logo.png)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Hello Rails
 
-Things you may want to cover:
+> App to practice the creation of a app with rails and react
 
-* Ruby version
+## Built With
 
-* System dependencies
+- Ruby on Rails
+- React
+- Webpack
+- PostgreSQL
 
-* Configuration
+### Getting Started
 
-* Database creation
+To get a local copy up and running follow these simple steps:
 
-* Database initialization
+### Prerequisites
 
-* How to run the test suite
+- Ruby ruby-3.1.2 installed
+- PostgreSQL dbms running
+- npm package manage
+- yarn package manage
 
-* Services (job queues, cache servers, search engines, etc.)
+### Setup
 
-* Deployment instructions
+- Open your terminal and navigate to the folder you would like to save the project.
 
-* ...
+- Type these commands into the terminal:
+
+```
+git clone https://github.com/rega1237/greeting-rails-webpack
+cd greeting-rails-webpack
+bundle install
+npm install
+yarn install
+bundle exec figaro install
+```
+- The bundle exec figaro install is to install and create the `application.yml` file and create the environment variables
+- You will need to configure your  `application.yml` file before you install and run the project. The `application.yml` file contains environment variables needed to deploy the webpage. You can find this file in the folder config/application.yml. There is a commented `application_example.txt` file you can use as a guide to configure your own.
+
+- Edit file application.yml
+
+  - Provide the values for the variables
+    - DATABASE_HOST
+    - DATABASE_USER
+    - DATABASE_PASSWORD
+
+- Type this commands into the terminal:
+
+```
+rails db:create
+rails db:reset
+```
+
+### Run application
+
+- Type this command into the terminal:
+
+```
+.\bin\dev
+```
+
+- Open your web browser at [http://127.0.0.1:3000/](http://127.0.0.1:3000/)
+
+## Author
+
+👤 **Rafael E. Guzman Arias**
+
+- GitHub: [@rega1237](https://github.com/rega1237)
+- LinkedIn: [Rafael E. Guzman Arias](https://www.linkedin.com/in/rafael-eduardo-guzman/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- [Microverse](https://www.microverse.org/) for the motivation.
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
