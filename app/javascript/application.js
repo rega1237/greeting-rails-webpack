@@ -5,19 +5,24 @@ import "./controllers"
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import Greeting from "./components/greeting";
+import Hello from "./components/Hello";
+import store from './redux/configureStore';
 
 function App() {
   return (
+    <Provider store={store}>
     <Router>
       <Routes>
-        <Route path="/" element={<h1>Hello this is home</h1>} />
+        <Route path="/" element={<Hello />} />
         <Route
           path="/greet"
           element={<Greeting />}
         />
       </Routes>
     </Router>
+    </Provider>
   );
 }
 
