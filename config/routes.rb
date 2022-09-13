@@ -3,4 +3,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "root#index"
+
+  get '*greet', to: "root#index", constraints: ->(request) do
+    !request.xhr? && request.format.html?
+  end
 end
